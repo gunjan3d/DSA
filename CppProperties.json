@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+{
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "mingw_64"
+      ],
+      "name": "Mingw64",
+      "includePath": [
+        "${env.INCLUDE}",
+        "${workspaceRoot}\\**"
+      ],
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ]
+=======
+{
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "mingw_64"
+      ],
+      "name": "Mingw64",
+      "includePath": [
+        "${env.INCLUDE}",
+        "${workspaceRoot}\\**"
+      ],
+      "intelliSenseMode": "linux-gcc-x64"
+    }
+  ]
+>>>>>>> 31f4055f5dd0999e9923eac60c6e375f2caf569c
+}
