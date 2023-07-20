@@ -1,75 +1,60 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int Partition(int arr[], int s, int e)
-{
-    int pivot = arr[s];
-    int cnt = 0;
-    for (int i = s + 1; i <= e; i++)
-    {
-        if (arr[i] <= pivot)
-        {
-            cnt++;
-        }
-    }
-    int pivotindex = s + cnt;
-    swap(arr[pivotindex], arr[s]);
-    int i = s, j = e;
-    while (i < pivotindex && j > pivotindex)
-    {
-        while (arr[i] < pivot)
-        {
-            /* left ka element chota h to ++ */
-            i++;
-        }
-        while (arr[j] > pivot)
-        {
-            /* rihht ka element bada h to j-- */
-            j--;
-        }
-        if (i < pivotindex && j > pivotindex)
-        {
-            /* loops se bahar nikalne pe swap crow */
-            swap(arr[i++], arr[j--]);
-        }
-    }
-    return pivotindex;
-}
-void QuickSort(int arr[], int s, int e)
-{
-    if (s >= e)
-    {
-        return;
-    }
-    int pi = Partition(arr, s, e);
-    QuickSort(arr, s, pi - 1);
-    QuickSort(arr, pi + 1, e);
-}
-int KadneAlgo(int arr[], int n)
-{
-    int cs = arr[0];
-    int ms = arr[0];
+// #define ll long long;
+// int getDuplicate(vector<int> arr)
+// {
+//     int size = arr.size();
+//     // cout<<size;
+//     sort(arr.begin(),arr.end());
+//     vector<bool> Check={0};
 
-    for (int i = 0; i < n; i++)
-    {
-        cs = max(cs + arr[i], arr[i]);
-        ms = max(ms, cs);
-    }
-    return ms;
-}
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (Check[arr[i]] == 0)
+//         {
+//             Check[arr[i]] = 1;
+//             // cout<<"h";
+//         }
+//         else
+//         {
+//             // cout<<endl;
+//             // for (int i = 0;i < size; i++)
+//             // {
+//             // cout<<Check[i];
+//             // }
+//             // cout<<endl;
+//             return arr[i];
+
+//         }
+//     }
+//     return -1;
+// }
 int main()
 {
-    int arr[] = {5, 4, 5, 6, 3, 328, 25, 25, 00, 12};
-    int size = sizeof(arr) / sizeof(int);
-    cout << "before sorting\n";
-    for (int i = 0; i < size; i++)
+    // vector<int> arr;
+    // arr.push_back(1);
+    // arr.push_back(3);
+    // arr.push_back(4);
+    // arr.push_back(2);
+    // arr.push_back(2);
+
+    // // cout << getDuplicate(arr);
+    // vector<bool> check(arr.size()-1,0);
+    // for(int i=0;i<check.size();i++)
+    // {
+    //     cout<<check[i]<<" ";
+    // }
+    int *arr = new int[5];
+    // int arr[5];
+    for (int i = 0; i < 5; i++)
+    {
+        arr[i] = i * rand() % 50;
+    }
+    for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
     }
-    cout << "\nAfter sorting\n";
-    QuickSort(arr, 0, size - 1);
-    for (int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    cout<<endl;
+    
     return 0;
 }
