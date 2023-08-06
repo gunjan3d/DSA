@@ -44,17 +44,50 @@ int main()
     // {
     //     cout<<check[i]<<" ";
     // }
-    int *arr = new int[5];
-    // int arr[5];
-    for (int i = 0; i < 5; i++)
-    {
-        arr[i] = i * rand() % 50;
-    }
-    for (int i = 0; i < 5; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout<<endl;
+    // int *arr = new int[5];
+    // // int arr[5];
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     arr[i] = i * rand() % 50;
+    // }
+    // for (int i = 0; i < 5; i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
+    // cout<<endl;
+
+    // for(int i=0;i<10;i++)
+    // {
+    //     cout<<i<<" ";
+    // }
+    // cout<<endl;
     
+    // for(int i=0;i<10;i++)
+    // {
+    //     if(i==2) break;
+    //     cout<<i<<" ";
+    // }
+    // cout<<endl;
+
+    // for(int i=0;i<10;i++)
+    // {
+    //     if(i==2)
+    //     continue;
+    //     cout<<i<<" ";
+    // }
+    // cout<<endl;
+    int n = 100;
+    cout<< (n >> 1) <<endl;
+    vector<int> a;
+    vector<int> b;
+    for(int i=0;i<10;i++)
+    {
+        a.push_back(i);
+    }
+    b = a;
+    for(int i:b)
+    {
+        cout<<i<<" ";
+    }
     return 0;
 }
