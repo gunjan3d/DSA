@@ -32,13 +32,15 @@ int FindMaxPieces(int n,int a,int b, int c)
 int main()
 {
     vector<int> v;
-    for(int i=0;i<10;i++)
-    {
-        v.push_back((rand()%50)* (i+1));
-    }
+    int n;
+    cin>>n;
+    // for(int i=0;i<n;i++)
+    // {
+    //     v.push_back((rand()%50)* (i+1));
+    // }
     int a,b,c;
     cin>>a>>b>>c;
-    int ans = FindMaxPieces(v.size(),a,b,c);
+    int ans = FindMaxPieces(n,a,b,c);
     cout<<ans<<endl;
     return 0;
 }

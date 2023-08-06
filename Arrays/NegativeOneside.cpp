@@ -21,7 +21,7 @@ void Move(int* arr,int n)
 int main()
 {
     int n = 10;
-    int arr[n] = {0,10,50,-50,10,60,-5,-3,-77,-1};
+    int arr[n] = {0,-10,50,-50,10,60,-5,-3,-77,-1};
 
     
     // sort(arr,arr+n);
