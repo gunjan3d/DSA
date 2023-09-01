@@ -20,15 +20,34 @@ int getDuplicate(vector<int> arr)
     }
     return -1;
 }
+//              only works if contents of array are in the raonge of 0 to n
+
+int GetDuplicatesOptimised(vector<int> arr)
+{
+    int n = arr.size();
+    for(int i=0;i<n;i++)
+    {
+        int x = arr[i]%n;
+        arr[x] += n;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]/n >=2)
+        {
+            return i;
+        }
+    }
+}
 int main()
 {
     vector<int> arr;
     arr.push_back(1);
     arr.push_back(3);
     arr.push_back(9);
-    arr.push_back(2);
+    arr.push_back(9);
     arr.push_back(2);
 
-    cout << getDuplicate(arr);
+    cout << GetDuplicatesOptimised(arr)<<endl;
+    
     return 0;
 }

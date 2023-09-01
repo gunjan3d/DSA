@@ -1,11 +1,12 @@
 
 #include <iostream>
 #include <climits>
-#include "ManMadeArray.h"
+#include"GFunctions.h"
+// #include "ManMadeArray.h"
 using namespace std;
 int main()
 {
-    int arr[] = {1, 2, -3, 2, 5};
+    int arr[] = {-2,-1};
     int Curr = 0;
     int Max = INT_MIN;
     int n = SizeofAarry(arr);
