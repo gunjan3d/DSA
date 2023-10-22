@@ -60,11 +60,12 @@ int main()
     for(int i=0;i<ans.size();i++)
     {
         int j=0;
+        cout<<"{ ";
         for(;j<2;j++)
         {
             cout<<ans[i][j]<<" ";
         }
-        cout<<endl;
+        cout<<"} ";
     }
 
     return 0;

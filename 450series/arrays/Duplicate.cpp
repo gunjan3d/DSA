@@ -37,6 +37,8 @@ int GetDuplicatesOptimised(vector<int> arr)
             return i;
         }
     }
+    return -1;
+    
 }
 int main()
 {
